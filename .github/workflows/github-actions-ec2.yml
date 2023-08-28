@@ -30,7 +30,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo yum install httpd
+            sudo yum install httpd -y
             sudo systemctl start httpd
             sudo systemctl enable httpd
             cd home
